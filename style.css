@@ -149,17 +149,17 @@ main {
    so it's impossible to miss. Once you type your real content, delete the
    .fill-in class (or just overwrite the text — the styling is just a flag
    for you, it won't show up specially once you replace it). */
-.fill-in {
-  background: #FFF3CD;
-  border: 1px dashed #B8860B;
-  padding: 2px 6px;
-  border-radius: 3px;
-  color: #6b4e00;
-  font-style: italic;
-  font-size: 0.95em;
-}
-
-a.fill-in { display: inline-block; }
+/*.fill-in {
+/*  background: #FFF3CD;
+/*  border: 1px dashed #B8860B;
+/*  padding: 2px 6px;
+/*  border-radius: 3px;
+/*  color: #6b4e00;
+/*  font-style: italic;
+/*  font-size: 0.95em;
+/*}
+/*
+/*a.fill-in { display: inline-block; }
 
 /* ---------- BUTTONS / LINKS ---------- */
 .btn {
