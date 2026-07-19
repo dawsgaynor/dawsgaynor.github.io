@@ -1,0 +1,238 @@
+:root {
+  --grey: #EDEDED;
+  --grey-panel: #F7F7F7;
+  --black: #1A1A1A;
+  --red: #CC0000;
+  --red-dark: #A30000;
+  --text: #2A2A2A;
+  --border: #D6D6D6;
+
+  --font-display: 'Georgia', 'Times New Roman', serif;
+  --font-body: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--grey);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  background: var(--black);
+  border-bottom: 4px solid var(--red);
+}
+
+.navbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.brand .fill-in { color: #fff; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a.active {
+  color: #fff;
+  border-color: var(--red);
+}
+
+/* ---------- HEADER / PAGE INTRO ---------- */
+.page-header {
+  padding: 56px 0 40px;
+}
+
+.page-header .eyebrow {
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 0 0 12px;
+  color: var(--black);
+}
+
+.page-header p.subtitle {
+  color: #555;
+  max-width: 55ch;
+  margin: 0;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+  padding-bottom: 64px;
+}
+
+.panel {
+  background: var(--grey-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+}
+
+.panel h2 {
+  font-family: var(--font-display);
+  color: var(--black);
+  border-left: 4px solid var(--red);
+  padding-left: 12px;
+  margin-top: 0;
+}
+
+.panel h3 {
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.entry {
+  margin-bottom: 28px;
+}
+
+.entry:last-child { margin-bottom: 0; }
+
+.entry-meta {
+  font-size: 0.85rem;
+  color: var(--red-dark);
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+/* ---------- PLACEHOLDER / FILL-IN STYLING ---------- */
+/* Anything you need to replace before publishing is wrapped in this style
+   so it's impossible to miss. Once you type your real content, delete the
+   .fill-in class (or just overwrite the text — the styling is just a flag
+   for you, it won't show up specially once you replace it). */
+.fill-in {
+  background: #FFF3CD;
+  border: 1px dashed #B8860B;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #6b4e00;
+  font-style: italic;
+  font-size: 0.95em;
+}
+
+a.fill-in { display: inline-block; }
+
+/* ---------- BUTTONS / LINKS ---------- */
+.btn {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.15s ease;
+}
+
+.btn:hover, .btn:focus-visible {
+  background: var(--red-dark);
+}
+
+/* ---------- CONTACT PAGE ---------- */
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-list li:last-child { border-bottom: none; }
+
+.contact-list .label {
+  width: 90px;
+  flex-shrink: 0;
+  color: #555;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.contact-list a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.contact-list a:hover, .contact-list a:focus-visible {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: var(--black);
+  padding: 20px 0;
+}
+
+.site-footer p {
+  color: #999;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* ---------- FOCUS / ACCESSIBILITY ---------- */
+a:focus-visible, .btn:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 560px) {
+  .navbar .wrap { flex-direction: column; align-items: flex-start; }
+  .nav-links { gap: 16px; flex-wrap: wrap; }
+  .panel { padding: 22px 20px; }
+}
